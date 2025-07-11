@@ -82,6 +82,7 @@ const sendForm = async (event) => {
         // perguntar para a IA
         const text = await askAI(question, game, apiKey)
         aiResponse.querySelector('.response-content').innerHTML = markdownToHTML(text)
+        aiResponse.classList.remove("hidden")
     } catch(error) {
         console.log('Erro: ', error)
     } finally {
